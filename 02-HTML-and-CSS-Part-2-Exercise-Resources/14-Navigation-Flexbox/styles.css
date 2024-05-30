@@ -1,0 +1,52 @@
+.sitetitle{
+    font-size: 32px;
+    font-weight: bold;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-style: solid;
+    width: 80vw;
+    margin: auto;
+
+}
+/* Този селектор прилага стилове за <header> елементите:
+
+display: flex; - задава Flexbox модел за подредба на децата на <header>.
+justify-content: space-between; - разпределя пространството между децата, така че те да бъдат разположени на максимално разстояние един от друг.
+border-bottom-width: 2px; - задава ширината на долната граница на 2 пиксела.
+border-bottom-color: rgb(0, 0, 0); - задава цвета на долната граница да бъде черен.
+border-bottom-style: solid; - задава стила на долната граница да бъде плътен.
+width: 80vw; - задава ширината на <header> да бъде 80% от ширината на прозореца на браузъра.
+margin: auto; - центрира <header> хоризонтално. */
+
+
+main{
+    width: 80vw;
+    margin: auto;
+}
+
+li{
+    margin: 10px;
+}
+
+header ul{
+    display: flex;
+    list-style-type: none;
+}
+
+/*Този селектор прилага стилове за всички <ul> елементи в <header>:
+
+display: flex; - задава Flexbox модел за подредба на децата на <ul>.
+list-style-type: none; - премахва булетите (точките) на списъка.*/
+
+header ul a{
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+}
+/*Този селектор прилага стилове за всички <a> елементи, които са деца на <ul> в <header>:
+
+color: rgb(0, 153, 0); - задава цвета на текста на линковете да бъде зелен.
+text-decoration: none; - премахва подчертаването на линковете.*/

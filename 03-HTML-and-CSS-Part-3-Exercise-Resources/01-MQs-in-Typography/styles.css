@@ -1,0 +1,51 @@
+body{
+    padding: 5em;
+    background-color: rgb(238, 238, 238);
+
+}
+
+.page {
+    max-width: 75rem; /* ограничава максималната ширина на контейнера .page до 75 рем единици.*/
+    margin:0 auto; /* центрира контейнера .page хоризонтално в страницата.*/
+}
+
+.page > header:first-of-type {
+    border-bottom: 2px solid #000;
+}
+/*2px solid #000; - добавя черна долна граница с дебелина от 2 пиксела на първия header елемент в .page.*/
+
+header .site-title {
+	min-width: 20vw; /* задава минимална ширина от 20% от ширината на прозореца на браузъра.*/
+	font-weight: bold; /*задава удебелен шрифт*/
+	font-size: 3rem; 
+	text-transform: uppercase; 
+}
+img[class^="align-"] { /*прилага стилове за всички изображения, чиито класове започват с align-.*/
+	padding: 0.5rem;
+	background: #FFF;
+	border: 3px solid #222; /* задава тъмно сива граница с дебелина от 3 пиксела.*/
+	box-shadow: 0 0 5rem 0.1rem rgba(0,0,0,0.25); /*добавя сенки около изображението.*/
+} 
+.align-left { /*прилага стилове за изображения с клас align-left.*/
+	float: left;
+	margin: 0 1.5rem 1rem 0; /*задава отстояние: 1.5 рем вдясно и 1 рем отдолу.*/
+}
+
+.align-right {
+	float: right;
+	margin: 0 0 1rem 1.5rem;
+}
+
+blockquote {
+    width: 40%;
+    min-width: 15rem;
+    float:right;
+    color: #444;
+    font: Georgia, serif;
+    padding-top: 0;
+}
+
+aside a {
+    text-decoration: none; /*премахва подчертаването на линковете.*/
+    color: #090;
+}

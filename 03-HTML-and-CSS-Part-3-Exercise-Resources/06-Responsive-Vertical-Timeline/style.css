@@ -1,0 +1,148 @@
+/* Установява box-sizing на всички HTML елементи, за да включва padding и border в широчината и височината */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Стилове за целия документ */
+  body {
+    background-color: rgb(255, 255, 255); /* Бял фон */
+    font-family: Georgia, serif; /* Шрифт */
+    border: 5px solid rgb(142, 142, 142); /* Рамка */
+  }
+  
+  /* Стилове за елемент с клас "site-title" */
+  .site-title {
+    font-size: 0.9em;
+    border: 2px solid rgb(142, 142, 142);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin: 25px auto 0;
+    width: 45%;
+  }
+  
+  /* Стилове за заглавията h2 */
+  h2 {
+    font-size: 2em;
+    font-style: italic;
+    margin-top: 0;
+  }
+  
+  /* Стилове за медия заявка, когато широчината на екрана е по-малка от 480px */
+  @media screen and (max-width: 480px) {
+    .site-title {
+      font-size: 0.3em;
+      margin: 25px 15px 0;
+      width: 75%;
+    }
+  }
+  
+  /* Стилове за времевата линия */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Визуална част на времевата линия */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: rgb(142, 142, 142);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Контейнерите на времевата линия */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* Кръглите "бутони" в края на контейнерите на времевата линия */
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #ff9f55;
+    border: 4px solid rgb(142, 142, 142);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Промяна на цвета на кръглите "бутони" за контейнерите отдясно */
+  .right::after {
+    background-color: rgb(4, 142, 3);
+    border: 4px solid rgb(142, 142, 142);
+  }
+  
+  /* Промяна на цвета на кръглите "бутони" за контейнерите отляво */
+  .left::after {
+    background-color: #ff9f55;
+    border: 4px solid rgb(142, 142, 142);
+  }
+  
+  /* Позиция на контейнерите отляво */
+  .left {
+    left: 0;
+  }
+  
+  /* Позиция на контейнерите отдясно */
+  .right {
+    left: 50%;
+  }
+  
+  /* Коригиране на кръглите "бутони" за контейнерите отдясно */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* Стилове за съдържанието на контейнерите на времевата линия */
+  .content {
+    padding: 0 30px;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Медия заявка - адаптивен дизайн за устройства с ширина на екрана по-малка от 600px */
+  @media screen and (max-width: 600px) {
+    /* Преместване на времевата линия наляво */
+    .timeline::after {
+      left: 31px;
+    }
+  
+    /* Контейнери с пълна ширина */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Настройка на стрелките да сочат наляво */
+    .container::before {
+      left: 60px;
+      border: medium solid rgb(142, 142, 142);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent rgb(142, 142, 142) transparent transparent;
+    }
+  
+    /* Позициониране на кръглите "бутони" на едно и също място */
+    .left::after,
+    .right::after {
+      left: 15px;
+    }
+  
+    /* Настройка на контейнерите отдясно да се държат като контейнерите отляво */
+    .right {
+      left: 0%;
+    }
+  }
+  

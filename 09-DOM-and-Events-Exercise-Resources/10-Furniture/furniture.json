@@ -1,0 +1,14 @@
+[{
+        "img": "https://t4.ftcdn.net/jpg/04/23/65/57/240_F_423655780_VSZ03nlUy0s1RP39cRWUHLj2bbWi2ebO.jpg",
+        "name": "Sofa",
+        "price": "259",
+        "decFactor": "0.4"
+
+    },
+    {
+        "img": "https://www.stylespafurniture.com/wp-content/uploads/2020/03/Cove_3_Door_Wardrobe_1.jpg",
+        "name": "Wardrobe",
+        "price": "120",
+        "decFactor": "1.2"
+    }
+]

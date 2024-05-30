@@ -1,0 +1,61 @@
+@import url('reset.css');
+@import url('typography.css');
+/* Общ стил за контейнера */
+body {
+	padding: 2rem;
+	background: #EEE;
+}
+
+/* Медийна заявка за екрани с максимална ширина 760px */
+@media screen and (max-width: 760px) {
+
+	/* Променя стиловете на таблицата и нейните елементи */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+	/* Скрива редовете в заглавния ред на таблицата */
+	thead tr { 
+		display: none;
+	}
+
+	/* Задава рамките на редовете в таблицата */
+	tr {
+		border: 1px solid #ccc;
+	}
+
+	/* Премахва долната рамка на всеки ред, освен последния */
+	tr:not(:last-child) {
+		border-bottom: 0;
+	}
+	
+	/* Променя стиловете на клетките в таблицата */
+	table td { 
+		border: none;
+		position: relative;
+		display: flex;
+	}
+
+	/* Задава рамките на страничните клетки */
+	table td:not(:last-child) {
+		border-bottom: 1px solid #DDD;
+	}
+
+	/* Задава стиловете на псевдоелементите преди съдържанието на клетките */
+	table td:before { 
+		display: block;
+		white-space: nowrap;
+		flex: 0 0 20%; /* Задава широчината на първата колона на 20% от широчината на таблицата */
+		font-weight: bold;
+		text-align: right;
+		padding-right: 1rem;
+	}
+
+	/* Задава съдържанието на първата колона */
+	td:nth-of-type(1):before { content: attr(data-fname); }
+	/* Задава съдържанието на втората колона */
+	td:nth-of-type(2):before { content: attr(data-lname); }
+	/* Задава съдържанието на третата колона */
+	td:nth-of-type(3):before { content: attr(data-jobtitle); }
+	
+}
