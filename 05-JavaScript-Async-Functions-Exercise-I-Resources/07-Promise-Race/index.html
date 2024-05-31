@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <button onclick="racePromise()">Promise Race</button>
+    <script src="app.js"></script>
+</body>
+</html>
+<!-- Три промиса p1, p2 и p3 се създават със съответните времеви задръжки от 1, 2 и 3 секунди чрез setTimeout(). Когато съответното време изтече, промисът ще бъде разрешен със съобщението, предадено на resolve().
+
+След това се извиква Promise.race([p1, p2, p3]), която приема масив от промиси като аргумент. Този метод връща нов промис, който ще бъде разрешен, когато първият промис от масива бъде разрешен или отхвърлен, независимо дали той е успешен или не. -->

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercise 4</title>
+</head>
+<body>
+    <button onclick="promiseRejection()">Promise Rejection</button>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- Тази функция promiseRejection() създава нов обещание (промис), което ще бъде отхвърлено след една секунда с помощта на функцията reject. След това промисът се обработва с метода .catch(), който извиква функцията console.error, предавайки й грешката, създадена в промиса. -->
+
+<!-- Така, ако този промис бъде отхвърлен (защото е създаден да бъде отхвърлен след секунда), ще бъде извикана функцията console.error, и в конзолата ще бъде изведено съобщението за грешка "Something went wrong!" -->
